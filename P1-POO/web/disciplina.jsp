@@ -24,7 +24,7 @@
         int i = Integer.parseInt(request.getParameter("i"));
         Disciplina alt = disciplinaList.get(i);
         try{
-            alt.setNota(Double.parseDouble(request.getParameter(novanota)));
+            alt.setNota(Double.parseDouble(request.getParameter("novanota")));
         }catch (Exception ex){
             alt.setNota(0.0);
         }
@@ -51,7 +51,7 @@
                 <th>Nota</th>
                 <th>Editar</th>
             </tr>
-            <%for(int i=0; i<disciplinaList.size();i++){{%>
+            <%for(int i=0; i<disciplinaList.size();i++){%>
             </tr>
             <tr>
             <% Disciplina d = disciplinaList.get(i);%>
